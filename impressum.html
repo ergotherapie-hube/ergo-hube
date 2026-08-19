@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Impressum</title>
+  <link rel="stylesheet" href="css/style.css">
+    <script src="js/crypto-js.min.js"></script>
+    <style>
+      .contact-mail {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    </style>
+</head>
+<body>
+
+<h1>Impressum</h1>
+
+<p>Ergotherapiepraxis Juliane Hube<br>
+Lehnitzstraße 21a<br>
+16515 Oranienburg</p>
+
+<p>Telefon: 03301 / 573 69 30<br>
+E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span>
+</p>
+
+<script>
+  const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
+  const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
+
+  function revealEmail() {
+    try {
+      const bytes = CryptoJS.AES.decrypt(ciphertext, key);
+      const email = bytes.toString(CryptoJS.enc.Utf8);
+
+      if (!email) {
+        console.error("Entschlüsselung fehlgeschlagen");
+        return;
+      }
+
+      const span = document.getElementById("mail");
+      span.textContent = email;
+      span.setAttribute("aria-label", "E-Mail-Adresse: " + email);
+
+      // Klickbar machen
+      span.onclick = function () {
+        window.location.href = "mailto:" + email;
+      };
+    } catch (e) {
+      console.error("Fehler bei AES-Entschlüsselung:", e);
+    }
+  }
+
+  // Variante A: direkt beim Laden anzeigen
+  revealEmail();
+
+  // Variante B: nur nach Klick anzeigen
+  // document.getElementById("mail").textContent = "E‑Mail anzeigen";
+  // document.getElementById("mail").onclick = revealEmail;
+</script>
+
+<p>Berufsbezeichnung: Ergotherapeutin (verliehen in Deutschland)<br>
+Aufsichtsbehörde: Gesundheitsamt Oberhavel</p>
+
+<p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Juliane Hube</p>
+
+</body>
+</html>
