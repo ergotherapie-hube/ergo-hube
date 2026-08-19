@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergotherapiepraxis Juliane Hube | Oranienburg</title>
+    
+    <script src="js/crypto-js.min.js"></script>
+    <style>
+      .contact-mail {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    </style>    
 </head>
 <body>
     <h1>Ergotherapiepraxis Juliane Hube</h1>
 
     <p>
-        Lehnitzstraße 21A<br>
+        Lehnitzstraße 21a<br>
         16515 Oranienburg
     </p>
 
@@ -19,9 +27,44 @@
     </p>
 
     <p>
-        E-Mail: <a href="mailto:info@ergotherapie-hube.de">info@ergotherapie-hube.de</a>
+        E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span>
     </p>
 
+<script>
+  const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
+  const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
+
+  function revealEmail() {
+    try {
+      const bytes = CryptoJS.AES.decrypt(ciphertext, key);
+      const email = bytes.toString(CryptoJS.enc.Utf8);
+
+      if (!email) {
+        console.error("Entschlüsselung fehlgeschlagen");
+        return;
+      }
+
+      const span = document.getElementById("mail");
+      span.textContent = email;
+      span.setAttribute("aria-label", "E-Mail-Adresse: " + email);
+
+      // Klickbar machen
+      span.onclick = function () {
+        window.location.href = "mailto:" + email;
+      };
+    } catch (e) {
+      console.error("Fehler bei AES-Entschlüsselung:", e);
+    }
+  }
+
+  // Variante A: direkt beim Laden anzeigen
+  revealEmail();
+
+  // Variante B: nur nach Klick anzeigen (falls du es härter machen willst)
+  // document.getElementById("mail").textContent = "E‑Mail anzeigen";
+  // document.getElementById("mail").onclick = revealEmail;
+</script>
+    
     <hr>
 
     <p>
