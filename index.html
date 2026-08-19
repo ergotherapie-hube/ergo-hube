@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ergotherapiepraxis Juliane Hube | Oranienburg</title>
-    
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/crypto-js.min.js"></script>
     <style>
       .contact-mail {
@@ -20,12 +20,10 @@
         Lehnitzstraße 21a<br>
         16515 Oranienburg
     </p>
-
     <p>
         Telefon: <a href="tel:+4933015736930">03301 / 573 69 30</a> oder <a href="tel:+4933015736931">03301 / 573 69 31</a><br>
         Fax: 03301 / 573 69 32
     </p>
-
     <p>
         E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span>
     </p>
@@ -60,15 +58,16 @@
   // Variante A: direkt beim Laden anzeigen
   revealEmail();
 
-  // Variante B: nur nach Klick anzeigen (falls du es härter machen willst)
-  // document.getElementById("mail").textContent = "E‑Mail anzeigen";
+  // Variante B: nur nach Klick anzeigen
+  // document.getElementById("mail").textContent = "E-Mail anzeigen";
   // document.getElementById("mail").onclick = revealEmail;
 </script>
-    
-    <hr>
 
-    <p>
-        Impressum | Datenschutz
-    </p>
+
+<hr>
+
+    <footer>
+        <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+    </footer>
 </body>
 </html>
