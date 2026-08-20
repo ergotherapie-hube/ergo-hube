@@ -2,6 +2,89 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Ergotherapiepraxis Juliane Hube</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/crypto-js.min.js"></script>
+</head>
+<body class="legal-page">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Zur Startseite">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Ergotherapiepraxis Juliane Hube</span>
+      </a>
+      <nav class="main-nav" aria-label="Seitennavigation">
+        <a href="index.html">Startseite</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container legal-main">
+    <h1>Impressum</h1>
+
+    <p>
+      Ergotherapiepraxis Juliane Hube<br>
+      Lehnitzstraße 21a<br>
+      16515 Oranienburg
+    </p>
+
+    <p>
+      Telefon: <a href="tel:+4933015736930">03301 / 573 69 30</a><br>
+      E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span>
+    </p>
+
+    <p>
+      Berufsbezeichnung: Ergotherapeutin (verliehen in Deutschland)<br>
+      Aufsichtsbehörde: Gesundheitsamt Oberhavel
+    </p>
+
+    <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Juliane Hube</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Ergotherapiepraxis Juliane Hube, Oranienburg</p>
+      <p><a href="index.html">Startseite</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
+    const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
+
+    function revealEmail() {
+      try {
+        const bytes = CryptoJS.AES.decrypt(ciphertext, key);
+        const email = bytes.toString(CryptoJS.enc.Utf8);
+
+        if (!email) {
+          console.error("Entschluesselung fehlgeschlagen");
+          return;
+        }
+
+        const span = document.getElementById("mail");
+        span.textContent = email;
+        span.setAttribute("aria-label", "E-Mail-Adresse: " + email);
+        span.onclick = function () {
+          window.location.href = "mailto:" + email;
+        };
+      } catch (e) {
+        console.error("Fehler bei AES-Entschluesselung:", e);
+      }
+    }
+
+    revealEmail();
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
   <title>Impressum</title>
   <link rel="stylesheet" href="css/style.css">
     <script src="js/crypto-js.min.js"></script>
