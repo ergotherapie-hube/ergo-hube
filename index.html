@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ergotherapiepraxis Juliane Hube in Oranienburg: individuelle Therapieangebote, persönliche Begleitung und zentrale Lage in der Lehnitzstraße.">
   <title>Ergotherapiepraxis Juliane Hube | Oranienburg</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/crypto-js.min.js"></script>
 </head>
 <body>
   <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
@@ -19,9 +15,10 @@
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Startseite Ergotherapiepraxis Juliane Hube">
         <span class="brand-dot" aria-hidden="true"></span>
-        <span>Ergotherapiepraxis Juliane Hube</span>
+        <span class="brand-name brand-name-long">Ergotherapiepraxis Juliane Hube</span>
+        <span class="brand-name brand-name-short" aria-hidden="true">Ergotherapiepraxis Hube</span>
       </a>
-      <nav class="main-nav" aria-label="Hauptnavigation">
+      <nav class="main-nav main-nav-home" aria-label="Hauptnavigation">
         <a href="#leistungen">Leistungen</a>
         <a href="#praxis">Praxis</a>
         <a href="#kontakt">Kontakt</a>
@@ -33,9 +30,9 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Oranienburg</p>
+          <p class="eyebrow">Ergotherapie in Oranienburg</p>
           <h1>Damit Alltag wieder gelingt</h1>
-          <p class="lead">In der Ergotherapiepraxis Juliane Hube stehen Sie als Mensch im Mittelpunkt. Unser Ziel ist eine alltagsnahe, individuelle Begleitung mit Ruhe, Struktur und fachlicher Klarheit.</p>
+          <p class="lead">Die Ergotherapiepraxis Juliane Hube begleitet Kinder, Jugendliche, Erwachsene und Senioren bei der Förderung und Wiederherstellung alltagsrelevanter Fähigkeiten.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="tel:+4933015736930">Jetzt anrufen</a>
             <a class="btn btn-secondary" href="#kontakt">Kontakt ansehen</a>
@@ -52,14 +49,14 @@
             Alternativ: <a href="tel:+4933015736931">03301 / 573 69 31</a><br>
             Fax: 03301 / 573 69 32
           </p>
-          <p>E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span></p>
+          <p>E-Mail: <a href="mailto:info@ergotherapie-hube.de" class="contact-mail">info@ergotherapie-hube.de</a></p>
         </aside>
       </div>
     </section>
 
     <section class="section" id="leistungen">
       <div class="container">
-        <h2>Leistungsbereiche</h2>
+        <h2>Therapieangebote</h2>
         <div class="cards">
           <article class="card">
             <h3>Alltagsorientierte Therapie</h3>
@@ -82,13 +79,14 @@
         <div>
           <h2>Die Praxis</h2>
           <p>Die Praxis liegt zentral in Oranienburg und ist gut erreichbar. Im Fokus steht eine ruhige Atmosphäre, in der Veränderungen mit Zeit und Struktur begleitet werden.</p>
+          <p>In der Ergotherapiepraxis Juliane Hube stehen Sie als Mensch im Mittelpunkt. Unser Ziel ist eine alltagsnahe, individuelle Begleitung mit Ruhe, Struktur und fachlicher Klarheit.</p>
           <p>Für organisatorische Fragen und Terminabsprachen ist die Praxis telefonisch erreichbar.</p>
         </div>
         <div class="info-block">
           <h3>Öffnungszeiten</h3>
-          <p>Nach Vereinbarung</p>
+          <p>Mo - Fr<br>Nach Vereinbarung</p>
           <h3>Anfahrt</h3>
-          <p>Lehnitzstraße 21a, 16515 Oranienburg<br><a href="https://maps.google.com/?q=Ergotherapiepraxis+Juliane+Hube+Oranienburg" target="_blank">Route auf Google Maps öffnen</a></p>
+          <p>Lehnitzstraße 21a, 16515 Oranienburg<br><a href="https://maps.google.com/?q=Ergotherapiepraxis+Juliane+Hube+Oranienburg" target="_blank" rel="noopener noreferrer">Route auf Google Maps öffnen</a></p>
         </div>
       </div>
     </section>
@@ -110,9 +108,9 @@
             <span class="label">Fax</span>
             <span class="value">03301 / 573 69 32</span>
           </div>
-          <a class="contact-item" id="mail-link" href="#" aria-label="E-Mail schreiben">
+          <a class="contact-item" href="mailto:info@ergotherapie-hube.de" aria-label="E-Mail schreiben">
             <span class="label">E-Mail</span>
-            <span class="value" id="mail-contact">wird geladen</span>
+            <span class="value">info@ergotherapie-hube.de</span>
           </a>
         </div>
       </div>
@@ -126,41 +124,5 @@
     </div>
   </footer>
 
-  <script>
-    const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
-    const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
-
-    function revealEmail() {
-    try {
-      const bytes = CryptoJS.AES.decrypt(ciphertext, key);
-      const email = bytes.toString(CryptoJS.enc.Utf8);
-
-      if (!email) {
-      console.error("Entschluesselung fehlgeschlagen");
-      return;
-      }
-
-      const heroMail = document.getElementById("mail");
-      if (heroMail) {
-      heroMail.textContent = email;
-      heroMail.setAttribute("aria-label", "E-Mail-Adresse: " + email);
-      heroMail.onclick = function () {
-        window.location.href = "mailto:" + email;
-      };
-      }
-
-      const mailContact = document.getElementById("mail-contact");
-      const mailLink = document.getElementById("mail-link");
-      if (mailContact && mailLink) {
-      mailContact.textContent = email;
-      mailLink.href = "mailto:" + email;
-      }
-    } catch (e) {
-      console.error("Fehler bei AES-Entschluesselung:", e);
-    }
-    }
-
-    revealEmail();
-  </script>
 </body>
 </html>
