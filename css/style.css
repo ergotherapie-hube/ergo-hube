@@ -120,10 +120,6 @@ a {
   text-decoration: none;
 }
 
-.brand-name-short {
-  display: none;
-}
-
 .brand-dot {
   width: 13px;
   height: 13px;
@@ -444,14 +440,6 @@ a {
     gap: 0.35rem;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .brand-name-long {
-    display: none;
-  }
-
-  .brand-name-short {
-    display: inline;
   }
 
   .main-nav a {
