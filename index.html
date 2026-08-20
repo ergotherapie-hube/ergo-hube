@@ -1,73 +1,166 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ergotherapiepraxis Juliane Hube | Oranienburg</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/crypto-js.min.js"></script>
-    <style>
-      .contact-mail {
-        cursor: pointer;
-        text-decoration: underline;
-      }
-    </style>    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ergotherapiepraxis Juliane Hube in Oranienburg: individuelle Therapieangebote, persönliche Begleitung und zentrale Lage in der Lehnitzstraße.">
+  <title>Ergotherapiepraxis Juliane Hube | Oranienburg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/crypto-js.min.js"></script>
 </head>
 <body>
-    <h1>Ergotherapiepraxis Juliane Hube</h1>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
 
-    <p>
-        Lehnitzstraße 21a<br>
-        16515 Oranienburg
-    </p>
-    <p>
-        Telefon: <a href="tel:+4933015736930">03301 / 573 69 30</a> oder <a href="tel:+4933015736931">03301 / 573 69 31</a><br>
-        Fax: 03301 / 573 69 32
-    </p>
-    <p>
-        E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span>
-    </p>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Startseite Ergotherapiepraxis Juliane Hube">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Ergotherapiepraxis Juliane Hube</span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#praxis">Praxis</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-<script>
-  const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
-  const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Oranienburg</p>
+          <h1>Damit Alltag wieder gelingt</h1>
+          <p class="lead">In der Ergotherapiepraxis Juliane Hube stehen Sie als Mensch im Mittelpunkt. Unser Ziel ist eine alltagsnahe, individuelle Begleitung mit Ruhe, Struktur und fachlicher Klarheit.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+4933015736930">Jetzt anrufen</a>
+            <a class="btn btn-secondary" href="#kontakt">Kontakt ansehen</a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Schnelle Kontaktdaten">
+          <h2>Praxis auf einen Blick</h2>
+          <p>
+            Lehnitzstraße 21a<br>
+            16515 Oranienburg
+          </p>
+          <p>
+            Telefon: <a href="tel:+4933015736930">03301 / 573 69 30</a><br>
+            Alternativ: <a href="tel:+4933015736931">03301 / 573 69 31</a><br>
+            Fax: 03301 / 573 69 32
+          </p>
+          <p>E-Mail: <span id="mail" class="contact-mail" aria-label="E-Mail-Adresse anzeigen"></span></p>
+        </aside>
+      </div>
+    </section>
 
-  function revealEmail() {
+    <section class="section" id="leistungen">
+      <div class="container">
+        <h2>Leistungsbereiche</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Alltagsorientierte Therapie</h3>
+            <p>Gemeinsame Ziele, die im echten Alltag greifen: schrittweise, verständlich und individuell abgestimmt.</p>
+          </article>
+          <article class="card">
+            <h3>Funktion und Handlung</h3>
+            <p>Förderung motorischer, kognitiver und wahrnehmungsbezogener Fähigkeiten für mehr Sicherheit im täglichen Leben.</p>
+          </article>
+          <article class="card">
+            <h3>Persönliche Begleitung</h3>
+            <p>Verlässliche therapeutische Zusammenarbeit mit klarer Kommunikation und passgenauen Übungsansätzen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="praxis">
+      <div class="container split">
+        <div>
+          <h2>Die Praxis</h2>
+          <p>Die Praxis liegt zentral in Oranienburg und ist gut erreichbar. Im Fokus steht eine ruhige Atmosphäre, in der Veränderungen mit Zeit und Struktur begleitet werden.</p>
+          <p>Für organisatorische Fragen und Terminabsprachen ist die Praxis telefonisch erreichbar.</p>
+        </div>
+        <div class="info-block">
+          <h3>Öffnungszeiten</h3>
+          <p>Nach Vereinbarung</p>
+          <h3>Anfahrt</h3>
+          <p>Lehnitzstraße 21a, 16515 Oranienburg</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontakt">
+      <div class="container contact-panel">
+        <h2>Kontakt</h2>
+        <p>Terminanfragen und Rückfragen können telefonisch oder per E-Mail erfolgen.</p>
+        <div class="contact-grid">
+          <a class="contact-item" href="tel:+4933015736930">
+            <span class="label">Telefon</span>
+            <span class="value">03301 / 573 69 30</span>
+          </a>
+          <a class="contact-item" href="tel:+4933015736931">
+            <span class="label">Alternative Nummer</span>
+            <span class="value">03301 / 573 69 31</span>
+          </a>
+          <div class="contact-item static-item">
+            <span class="label">Fax</span>
+            <span class="value">03301 / 573 69 32</span>
+          </div>
+          <a class="contact-item" id="mail-link" href="#" aria-label="E-Mail schreiben">
+            <span class="label">E-Mail</span>
+            <span class="value" id="mail-contact">wird geladen</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Ergotherapiepraxis Juliane Hube, Oranienburg</p>
+      <p><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const key = "G+X:Aw.~zrZDd&OI=E3LS/=7=p$B7&UZ";
+    const ciphertext = "U2FsdGVkX18bgElAL3A+AK53zaJ1tNn4M6xbbxb3l2u0PsTivQ6pSzMDkLSbYg17";
+
+    function revealEmail() {
     try {
       const bytes = CryptoJS.AES.decrypt(ciphertext, key);
       const email = bytes.toString(CryptoJS.enc.Utf8);
 
       if (!email) {
-        console.error("Entschlüsselung fehlgeschlagen");
-        return;
+      console.error("Entschluesselung fehlgeschlagen");
+      return;
       }
 
-      const span = document.getElementById("mail");
-      span.textContent = email;
-      span.setAttribute("aria-label", "E-Mail-Adresse: " + email);
-
-      // Klickbar machen
-      span.onclick = function () {
+      const heroMail = document.getElementById("mail");
+      if (heroMail) {
+      heroMail.textContent = email;
+      heroMail.setAttribute("aria-label", "E-Mail-Adresse: " + email);
+      heroMail.onclick = function () {
         window.location.href = "mailto:" + email;
       };
+      }
+
+      const mailContact = document.getElementById("mail-contact");
+      const mailLink = document.getElementById("mail-link");
+      if (mailContact && mailLink) {
+      mailContact.textContent = email;
+      mailLink.href = "mailto:" + email;
+      }
     } catch (e) {
-      console.error("Fehler bei AES-Entschlüsselung:", e);
+      console.error("Fehler bei AES-Entschluesselung:", e);
     }
-  }
+    }
 
-  // Variante A: direkt beim Laden anzeigen
-  revealEmail();
-
-  // Variante B: nur nach Klick anzeigen
-  // document.getElementById("mail").textContent = "E-Mail anzeigen";
-  // document.getElementById("mail").onclick = revealEmail;
-</script>
-
-
-<hr>
-
-    <footer>
-        <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-    </footer>
+    revealEmail();
+  </script>
 </body>
 </html>
